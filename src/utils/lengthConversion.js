@@ -7,7 +7,7 @@ const lengthConversion = (baseUnit, conversionUnit, input) => {
     conversionUnit.length - 1
   );
 
-  // to simplify, heres the conversions from meters to x. Will use to convert all to meters and then back to converted unit
+  // to simplify, heres the conversions from x to meters1. Will use to convert all to meters and then back to converted unit
   const xToMetersConversions = {
     Inches: 39.37008,
     Feet: 3.28084,
