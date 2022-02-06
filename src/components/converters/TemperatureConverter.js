@@ -18,7 +18,7 @@ const TemperatureConverter = () => {
   return (
     <Grid>
       <Row>
-        <Column sm={1} md={1} lg={1}>
+        <Column sm={1} md={1} lg={2}>
           <RadioButtonGroup
             labelText="Base Unit"
             legendText="Base Unit"
@@ -32,7 +32,7 @@ const TemperatureConverter = () => {
             <RadioButton labelText="Rankine" value="RB" id="RB" />
           </RadioButtonGroup>
         </Column>
-        <Column sm={0} md={3} lg={5}>
+        <Column sm={0} md={3} lg={4}>
           <NumberInput
             id="baseUnitInput1"
             min={0}
@@ -43,7 +43,7 @@ const TemperatureConverter = () => {
             onChange={(e) => setInput(e.imaginaryTarget.value)}
           />
         </Column>
-        <Column sm={0} md={3} lg={5}>
+        <Column sm={0} md={3} lg={4}>
           <NumberInput
             id="conversionUnitOutput"
             value={output}
@@ -71,7 +71,7 @@ const TemperatureConverter = () => {
             readOnly
           />
         </Column>
-        <Column sm={1} md={1} lg={1}>
+        <Column sm={1} md={1} lg={2}>
           <RadioButtonGroup
             labelText="Conversion Unit"
             legendText="Conversion Unit"

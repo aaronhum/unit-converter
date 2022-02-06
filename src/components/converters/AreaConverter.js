@@ -18,7 +18,7 @@ const AreaConverter = () => {
   return (
     <Grid>
       <Row>
-        <Column sm={1} md={1} lg={1}>
+        <Column sm={1} md={1} lg={2}>
           <RadioButtonGroup
             labelText="Base Unit"
             legendText="Base Unit"
@@ -60,7 +60,7 @@ const AreaConverter = () => {
             />
           </RadioButtonGroup>
         </Column>
-        <Column sm={0} md={3} lg={5}>
+        <Column sm={0} md={3} lg={4}>
           <NumberInput
             id="baseUnitInput1"
             value={input}
@@ -69,7 +69,7 @@ const AreaConverter = () => {
             onChange={(e) => setInput(e.imaginaryTarget.value)}
           />
         </Column>
-        <Column sm={0} md={3} lg={5}>
+        <Column sm={0} md={3} lg={4}>
           <NumberInput
             id="conversionUnitOutput"
             value={output}
@@ -99,7 +99,7 @@ const AreaConverter = () => {
             readOnly
           />
         </Column>
-        <Column sm={1} md={1} lg={1}>
+        <Column sm={1} md={1} lg={2}>
           <RadioButtonGroup
             labelText="Conversion Unit"
             legendText="Conversion Unit"
