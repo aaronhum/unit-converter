@@ -6,9 +6,7 @@ const HeaderBar = () => {
   return (
     <div>
       <Header aria-label="Header">
-        <HeaderName href="" prefix="Unit">
-          Converter
-        </HeaderName>
+        <HeaderName prefix="Unit">Converter</HeaderName>
       </Header>
     </div>
   );
