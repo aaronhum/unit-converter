@@ -7,14 +7,14 @@ import {
   RadioButton,
   RadioButtonGroup,
 } from "carbon-components-react";
-import lengthConversion from "../../utils/lengthConversion";
+import volumeConversion from "../../utils/volumeConversion";
 import "./converter.css";
 
 const VolumeConverter = () => {
-  const [baseUnit, setBaseUnit] = useState("InchesB");
-  const [conversionUnit, setConversionUnit] = useState("InchesC");
+  const [baseUnit, setBaseUnit] = useState("tspB");
+  const [conversionUnit, setConversionUnit] = useState("tspC");
   const [input, setInput] = useState(1);
-  const output = lengthConversion(baseUnit, conversionUnit, input);
+  const output = volumeConversion(baseUnit, conversionUnit, input);
   return (
     <Grid>
       <Row>
@@ -29,7 +29,12 @@ const VolumeConverter = () => {
             <RadioButton labelText="Tea Spoon(US)" value="tspB" id="tspB" />
             <RadioButton labelText="Table Spoon(US)" value="tbsB" id="tbsB" />
             <RadioButton labelText="Fl Ounce(US)" value="OunceB" id="OunceB" />
-            <RadioButton labelText="Cup(US)" value="CupB" id="CupB" />
+            <RadioButton
+              labelText="Cup(US Customary)"
+              value="CupcB"
+              id="CupcB"
+            />
+            <RadioButton labelText="Cup(US Legal)" value="CuplB" id="CuplB" />
             <RadioButton labelText="Pint(US)" value="PintB" id="PintB" />
             <RadioButton labelText="Quart(US)" value="QuartB" id="QuartB" />
             <RadioButton labelText="Gallon(US)" value="GallonB" id="GallonB" />
@@ -52,39 +57,23 @@ const VolumeConverter = () => {
               value="iGallonB"
               id="iGallonB"
             />
-            <RadioButton
-              labelText="Cu. Inches"
-              value="cuInchesB"
-              id="cuInchesB"
-            />
             <RadioButton labelText="Liters" value="LitersB" id="LitersB" />
             <RadioButton
               labelText="Milliliters"
               value="MilliliersB"
               id="MilliliersB"
             />
+            <RadioButton
+              labelText="Cu. Inches"
+              value="cuInchesB"
+              id="cuInchesB"
+            />
             <RadioButton labelText="Cu. Feet" value="cuFeetB" id="cuFeetB" />
             <RadioButton labelText="Cu. Yards" value="cuYardsB" id="cuYardsB" />
-            <RadioButton labelText="Cu. Miles" value="cuMilesB" id="cuMilesB" />
-            <RadioButton
-              labelText="Cu. Millimeters"
-              value="cuMillimetersB"
-              id="cuMillimetersB"
-            />
             <RadioButton
               labelText="Cu. Centimeters"
               value="cuCentimetersB"
               id="cuCentimetersB"
-            />
-            <RadioButton
-              labelText="Cu. Meters"
-              value="cuMetersB"
-              id="cuMetersB"
-            />
-            <RadioButton
-              labelText="Cu. Kilometers"
-              value="cuKilometersB"
-              id="cuKilometersB"
             />
           </RadioButtonGroup>
         </Column>
@@ -137,25 +126,54 @@ const VolumeConverter = () => {
             defaultSelected={conversionUnit}
             onChange={(selected) => setConversionUnit(selected)}
           >
-            <RadioButton labelText="Inches" value="InchesC" id="InchesC" />
-            <RadioButton labelText="Feet" value="FeetC" id="FeetC" />
-            <RadioButton labelText="Yards" value="YardsC" id="YardsC" />
-            <RadioButton labelText="Miles" value="MilesC" id="MilesC" />
+            <RadioButton labelText="Tea Spoon(US)" value="tspC" id="tspC" />
+            <RadioButton labelText="Table Spoon(US)" value="tbsC" id="tbsC" />
+            <RadioButton labelText="Fl Ounce(US)" value="OunceC" id="OunceC" />
             <RadioButton
-              labelText="Millimeters"
-              value="MillimetersC"
-              id="MillimetersC"
+              labelText="Cup(US Customary)"
+              value="CupcC"
+              id="CupcC"
+            />
+            <RadioButton labelText="Cup(US Legal)" value="CuplC" id="CuplC" />
+            <RadioButton labelText="Pint(US)" value="PintC" id="PintC" />
+            <RadioButton labelText="Quart(US)" value="QuartC" id="QuartC" />
+            <RadioButton labelText="Gallon(US)" value="GallonC" id="GallonC" />
+            <RadioButton labelText="Tea Spoon(Imp)" value="itspC" id="itspC" />
+            <RadioButton
+              labelText="Table Spoon(Imp)"
+              value="itbsC"
+              id="itbsC"
             />
             <RadioButton
-              labelText="Centimeters"
-              value="CentimetersC"
-              id="CentimetersC"
+              labelText="Fl Ounce(Imp)"
+              value="iOunceC"
+              id="iOunceC"
             />
-            <RadioButton labelText="Meters" value="MetersC" id="MetersC" />
+            <RadioButton labelText="Cup(Imp)" value="iCupC" id="iCupC" />
+            <RadioButton labelText="Pint(Imp)" value="iPintC" id="iPintC" />
+            <RadioButton labelText="Quart(Imp)" value="iQuartC" id="iQuartC" />
             <RadioButton
-              labelText="Kilometers"
-              value="KilometersC"
-              id="KilometersC"
+              labelText="Gallon(Imp)"
+              value="iGallonC"
+              id="iGallonC"
+            />
+            <RadioButton labelText="Liters" value="LitersC" id="LitersC" />
+            <RadioButton
+              labelText="Milliliters"
+              value="MilliliersC"
+              id="MilliliersC"
+            />
+            <RadioButton
+              labelText="Cu. Inches"
+              value="cuInchesC"
+              id="cuInchesC"
+            />
+            <RadioButton labelText="Cu. Feet" value="cuFeetC" id="cuFeetC" />
+            <RadioButton labelText="Cu. Yards" value="cuYardsC" id="cuYardsC" />
+            <RadioButton
+              labelText="Cu. Centimeters"
+              value="cuCentimetersC"
+              id="cuCentimetersC"
             />
           </RadioButtonGroup>
         </Column>

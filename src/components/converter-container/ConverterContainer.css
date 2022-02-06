@@ -10,6 +10,24 @@
 .VolumeIcon {
   margin-right: 54px;
 }
+.WeightIcon {
+  margin-right: 58px;
+}
+.TimeIcon {
+  margin-right: 72px;
+}
+.MemoryIcon {
+  margin-right: 49px;
+}
+.FrequencyIcon {
+  margin-right: 31px;
+}
+.PowerIcon {
+  margin-right: 62px;
+}
+.AngleIcon {
+  margin-right: 66px;
+}
 .LabelText {
   text-align: right;
 }

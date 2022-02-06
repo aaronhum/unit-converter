@@ -9,11 +9,14 @@ import TimeConverter from "../converters/TimeConverter";
 import MemoryConverter from "../converters/MemoryConverter";
 import {
   Area20,
+  ConnectionSignal20,
   Hourglass20,
+  Plug20,
   RulerAlt20,
   Save20,
   Scales20,
   Temperature20,
+  WatsonHealthAngle20,
   WatsonHealthSubVolume20,
 } from "@carbon/icons-react";
 import "./ConverterContainer.css";
@@ -109,6 +112,48 @@ const ConverterContainer = () => {
               <p>
                 <Save20 className="MemoryIcon" />
                 Memory
+              </p>
+            </div>
+          }
+          disabled
+        >
+          <MemoryConverter />
+        </Tab>
+        <Tab
+          id="memory"
+          label={
+            <div className="LabelText">
+              <p>
+                <ConnectionSignal20 className="FrequencyIcon" />
+                Frequency
+              </p>
+            </div>
+          }
+          disabled
+        >
+          <MemoryConverter />
+        </Tab>
+        <Tab
+          id="power"
+          label={
+            <div className="LabelText">
+              <p>
+                <Plug20 className="PowerIcon" />
+                Power
+              </p>
+            </div>
+          }
+          disabled
+        >
+          <MemoryConverter />
+        </Tab>
+        <Tab
+          id="Angle"
+          label={
+            <div className="LabelText">
+              <p>
+                <WatsonHealthAngle20 className="AngleIcon" />
+                Angle
               </p>
             </div>
           }
