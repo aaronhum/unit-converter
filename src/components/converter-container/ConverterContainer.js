@@ -7,39 +7,114 @@ import VolumeConverter from "../converters/VolumeConverter";
 import WeightConverter from "../converters/WeightConverter";
 import TimeConverter from "../converters/TimeConverter";
 import MemoryConverter from "../converters/MemoryConverter";
-import SpeedConverter from "../converters/SpeedConverter";
-import DensityConverter from "../converters/DensityConverter";
+import {
+  Area20,
+  Hourglass20,
+  RulerAlt20,
+  Save20,
+  Scales20,
+  Temperature20,
+  WatsonHealthSubVolume20,
+} from "@carbon/icons-react";
+import "./ConverterContainer.css";
 
 const ConverterContainer = () => {
   return (
     <div>
       <Tabs type="container">
-        <Tab id="length" label="Length">
+        <Tab
+          id="length"
+          label={
+            <div className="LabelText">
+              <p>
+                <RulerAlt20 className="LengthIcon" />
+                Length
+              </p>
+            </div>
+          }
+        >
           <LengthConverter />
         </Tab>
-        <Tab id="temperature" label="Temperature">
+        <Tab
+          id="temperature"
+          label={
+            <div className="LabelText">
+              <p>
+                <Temperature20 className="TemperatureIcon" />
+                Temperature
+              </p>
+            </div>
+          }
+        >
           <TemperatureConverter />
         </Tab>
-        <Tab id="area" label="Area">
+        <Tab
+          id="area"
+          label={
+            <div className="LabelText">
+              <p>
+                <Area20 className="AreaIcon" />
+                Area
+              </p>
+            </div>
+          }
+        >
           <AreaConverter />
         </Tab>
-        <Tab id="volume" label="Volume" disabled>
+        <Tab
+          id="volume"
+          label={
+            <div className="LabelText">
+              <p>
+                <WatsonHealthSubVolume20 className="VolumeIcon" />
+                Volume
+              </p>
+            </div>
+          }
+        >
           <VolumeConverter />
         </Tab>
-        <Tab id="weight" label="Weight" disabled>
+        <Tab
+          id="weight"
+          label={
+            <div className="LabelText">
+              <p>
+                <Scales20 className="WeightIcon" />
+                Weight
+              </p>
+            </div>
+          }
+          disabled
+        >
           <WeightConverter />
         </Tab>
-        <Tab id="time" label="Time" disabled>
+        <Tab
+          id="time"
+          label={
+            <div className="LabelText">
+              <p>
+                <Hourglass20 className="TimeIcon" />
+                Time
+              </p>
+            </div>
+          }
+          disabled
+        >
           <TimeConverter />
         </Tab>
-        <Tab id="memory" label="Memory" disabled>
+        <Tab
+          id="memory"
+          label={
+            <div className="LabelText">
+              <p>
+                <Save20 className="MemoryIcon" />
+                Memory
+              </p>
+            </div>
+          }
+          disabled
+        >
           <MemoryConverter />
-        </Tab>
-        <Tab id="liquid-volume" label="Liquid Volume" disabled>
-          <SpeedConverter />
-        </Tab>
-        <Tab id="density" label="Density" disabled>
-          <DensityConverter />
         </Tab>
       </Tabs>
     </div>

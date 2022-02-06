@@ -8,6 +8,7 @@ import {
   RadioButtonGroup,
 } from "carbon-components-react";
 import lengthConversion from "../../utils/lengthConversion";
+import "./converter.css";
 
 const MemoryConverter = () => {
   const [baseUnit, setBaseUnit] = useState("InchesB");
@@ -17,7 +18,7 @@ const MemoryConverter = () => {
   return (
     <Grid>
       <Row>
-        <Column sm={1} md={1} lg={1}>
+        <Column sm={1} md={1} lg={2} className="RadioButtons">
           <RadioButtonGroup
             labelText="Base Unit"
             legendText="Base Unit"
@@ -47,7 +48,7 @@ const MemoryConverter = () => {
             />
           </RadioButtonGroup>
         </Column>
-        <Column sm={0} md={3} lg={5}>
+        <Column sm={0} md={3} lg={4}>
           <NumberInput
             id="baseUnitInput1"
             min={0}
@@ -58,7 +59,7 @@ const MemoryConverter = () => {
             onChange={(e) => setInput(e.imaginaryTarget.value)}
           />
         </Column>
-        <Column sm={0} md={3} lg={5}>
+        <Column sm={0} md={3} lg={4}>
           <NumberInput
             id="conversionUnitOutput"
             value={output}
@@ -88,7 +89,7 @@ const MemoryConverter = () => {
             readOnly
           />
         </Column>
-        <Column sm={1} md={1} lg={1}>
+        <Column sm={1} md={1} lg={2} className="RadioButtons">
           <RadioButtonGroup
             labelText="Conversion Unit"
             legendText="Conversion Unit"

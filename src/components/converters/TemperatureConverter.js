@@ -8,6 +8,7 @@ import {
   RadioButtonGroup,
 } from "carbon-components-react";
 import temperatureConversion from "../../utils/temperatureConversion";
+import "./converter.css";
 
 const TemperatureConverter = () => {
   const [baseUnit, setBaseUnit] = useState("FB");
@@ -18,7 +19,7 @@ const TemperatureConverter = () => {
   return (
     <Grid>
       <Row>
-        <Column sm={1} md={1} lg={2}>
+        <Column sm={1} md={1} lg={2} className="RadioButtons">
           <RadioButtonGroup
             labelText="Base Unit"
             legendText="Base Unit"
@@ -71,7 +72,7 @@ const TemperatureConverter = () => {
             readOnly
           />
         </Column>
-        <Column sm={1} md={1} lg={2}>
+        <Column sm={1} md={1} lg={2} className="RadioButtons">
           <RadioButtonGroup
             labelText="Conversion Unit"
             legendText="Conversion Unit"

@@ -8,6 +8,7 @@ import {
   RadioButtonGroup,
 } from "carbon-components-react";
 import lengthConversion from "../../utils/lengthConversion";
+import "./converter.css";
 
 const TimeConverter = () => {
   const [baseUnit, setBaseUnit] = useState("InchesB");
@@ -17,7 +18,7 @@ const TimeConverter = () => {
   return (
     <Grid>
       <Row>
-        <Column sm={1} md={1} lg={1}>
+        <Column sm={1} md={1} lg={2} className="RadioButtons">
           <RadioButtonGroup
             labelText="Base Unit"
             legendText="Base Unit"
@@ -88,7 +89,7 @@ const TimeConverter = () => {
             readOnly
           />
         </Column>
-        <Column sm={1} md={1} lg={1}>
+        <Column sm={1} md={1} lg={2} className="RadioButtons">
           <RadioButtonGroup
             labelText="Conversion Unit"
             legendText="Conversion Unit"

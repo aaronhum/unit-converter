@@ -8,6 +8,7 @@ import {
   RadioButtonGroup,
 } from "carbon-components-react";
 import areaConversion from "../../utils/areaConversion";
+import "./converter.css";
 
 const AreaConverter = () => {
   const [baseUnit, setBaseUnit] = useState("AcresB");
@@ -18,7 +19,7 @@ const AreaConverter = () => {
   return (
     <Grid>
       <Row>
-        <Column sm={1} md={1} lg={2}>
+        <Column sm={1} md={1} lg={2} className="RadioButtons">
           <RadioButtonGroup
             labelText="Base Unit"
             legendText="Base Unit"
@@ -99,7 +100,7 @@ const AreaConverter = () => {
             readOnly
           />
         </Column>
-        <Column sm={1} md={1} lg={2}>
+        <Column sm={1} md={1} lg={2} className="RadioButtons">
           <RadioButtonGroup
             labelText="Conversion Unit"
             legendText="Conversion Unit"
