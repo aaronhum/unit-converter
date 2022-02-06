@@ -20,7 +20,7 @@ const ConverterContainer = () => {
         <Tab id="temperature" label="Temperature">
           <TemperatureConverter />
         </Tab>
-        <Tab id="area" label="Area" disabled>
+        <Tab id="area" label="Area">
           <AreaConverter />
         </Tab>
         <Tab id="volume" label="Volume" disabled>
@@ -35,7 +35,7 @@ const ConverterContainer = () => {
         <Tab id="memory" label="Memory" disabled>
           <MemoryConverter />
         </Tab>
-        <Tab id="speed" label="Speed" disabled>
+        <Tab id="liquid-volume" label="Liquid Volume" disabled>
           <SpeedConverter />
         </Tab>
         <Tab id="density" label="Density" disabled>
