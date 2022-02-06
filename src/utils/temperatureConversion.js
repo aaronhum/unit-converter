@@ -39,6 +39,7 @@ const temperatureConversion = (baseUnit, conversionUnit, input) => {
       break;
     case "K":
       converted = baseToC + 273.5;
+      break;
     case "R":
       converted = baseToC * (9 / 5) + 491.67;
       break;
