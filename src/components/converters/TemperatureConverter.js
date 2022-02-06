@@ -7,13 +7,14 @@ import {
   RadioButton,
   RadioButtonGroup,
 } from "carbon-components-react";
-import lengthConversion from "../../utils/lengthConversion";
+import temperatureConversion from "../../utils/temperatureConversion";
 
 const TemperatureConverter = () => {
-  const [baseUnit, setBaseUnit] = useState("InchesB");
-  const [conversionUnit, setConversionUnit] = useState("InchesC");
+  const [baseUnit, setBaseUnit] = useState("FB");
+  const [conversionUnit, setConversionUnit] = useState("FC");
   const [input, setInput] = useState(1);
-  const output = lengthConversion(baseUnit, conversionUnit, input);
+  const output = temperatureConversion(baseUnit, conversionUnit, input);
+
   return (
     <Grid>
       <Row>
@@ -25,26 +26,10 @@ const TemperatureConverter = () => {
             defaultSelected={baseUnit}
             onChange={(selected) => setBaseUnit(selected)}
           >
-            <RadioButton labelText="Inches" value="InchesB" id="InchesB" />
-            <RadioButton labelText="Feet" value="FeetB" id="FeetB" />
-            <RadioButton labelText="Yards" value="YardsB" id="YardsB" />
-            <RadioButton labelText="Miles" value="MilesB" id="MilesB" />
-            <RadioButton
-              labelText="Millimeters"
-              value="MillimetersB"
-              id="MillimetersB"
-            />
-            <RadioButton
-              labelText="Centimeters"
-              value="CentimetersB"
-              id="CentimetersB"
-            />
-            <RadioButton labelText="Meters" value="MetersB" id="MetersB" />
-            <RadioButton
-              labelText="Kilometers"
-              value="KilometersB"
-              id="KilometersB"
-            />
+            <RadioButton labelText="Fahrenheit" value="FB" id="FB" />
+            <RadioButton labelText="Celcius" value="CB" id="CB" />
+            <RadioButton labelText="Kelvin" value="KB" id="KB" />
+            <RadioButton labelText="Rankine" value="RB" id="RB" />
           </RadioButtonGroup>
         </Column>
         <Column sm={0} md={3} lg={5}>
@@ -96,26 +81,10 @@ const TemperatureConverter = () => {
             defaultSelected={conversionUnit}
             onChange={(selected) => setConversionUnit(selected)}
           >
-            <RadioButton labelText="Inches" value="InchesC" id="InchesC" />
-            <RadioButton labelText="Feet" value="FeetC" id="FeetC" />
-            <RadioButton labelText="Yards" value="YardsC" id="YardsC" />
-            <RadioButton labelText="Miles" value="MilesC" id="MilesC" />
-            <RadioButton
-              labelText="Millimeters"
-              value="MillimetersC"
-              id="MillimetersC"
-            />
-            <RadioButton
-              labelText="Centimeters"
-              value="CentimetersC"
-              id="CentimetersC"
-            />
-            <RadioButton labelText="Meters" value="MetersC" id="MetersC" />
-            <RadioButton
-              labelText="Kilometers"
-              value="KilometersC"
-              id="KilometersC"
-            />
+            <RadioButton labelText="Fahrenheit" value="FC" id="FC" />
+            <RadioButton labelText="Celcius" value="CC" id="CC" />
+            <RadioButton labelText="Kelvin" value="KC" id="KC" />
+            <RadioButton labelText="Rankine" value="RC" id="RC" />
           </RadioButtonGroup>
         </Column>
       </Row>
