@@ -7,7 +7,7 @@ const volumeConversion = (baseUnit, conversionUnit, input) => {
     conversionUnit.length - 1
   );
 
-  // to simplify, heres the conversions from x to meters1. Will use to convert all to meters and then back to converted unit
+  // to simplify, heres the conversions from x to liters. Will use to convert all to liters and then back to converted unit
   const xToLitersConversions = {
     tsp: 202.8848,
     tbs: 67.62826,

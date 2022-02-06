@@ -7,14 +7,14 @@ import {
   RadioButton,
   RadioButtonGroup,
 } from "carbon-components-react";
-import lengthConversion from "../../utils/lengthConversion";
+import massConversion from "../../utils/massConversion";
 import "./converter.css";
 
 const MassConverter = () => {
-  const [baseUnit, setBaseUnit] = useState("InchesB");
-  const [conversionUnit, setConversionUnit] = useState("InchesC");
+  const [baseUnit, setBaseUnit] = useState("PoundsB");
+  const [conversionUnit, setConversionUnit] = useState("PoundsC");
   const [input, setInput] = useState(1);
-  const output = lengthConversion(baseUnit, conversionUnit, input);
+  const output = massConversion(baseUnit, conversionUnit, input);
   return (
     <Grid>
       <Row>
@@ -26,25 +26,21 @@ const MassConverter = () => {
             defaultSelected={baseUnit}
             onChange={(selected) => setBaseUnit(selected)}
           >
-            <RadioButton labelText="Inches" value="InchesB" id="InchesB" />
-            <RadioButton labelText="Feet" value="FeetB" id="FeetB" />
-            <RadioButton labelText="Yards" value="YardsB" id="YardsB" />
-            <RadioButton labelText="Miles" value="MilesB" id="MilesB" />
+            <RadioButton labelText="Pounds" value="PoundsB" id="PoundsB" />
+            <RadioButton labelText="Grains" value="GrainsB" id="GrainsB" />
+            <RadioButton labelText="Drams" value="DramsB" id="DramsB" />
+            <RadioButton labelText="Ounces" value="mOuncesB" id="mOuncesB" />
+            <RadioButton labelText="Tons" value="TonsB" id="TonsB" />
+            <RadioButton labelText="Grams" value="GramsB" id="GramsB" />
             <RadioButton
-              labelText="Millimeters"
-              value="MillimetersB"
-              id="MillimetersB"
+              labelText="Kilograms"
+              value="KilogramsB"
+              id="KilogramsB"
             />
             <RadioButton
-              labelText="Centimeters"
-              value="CentimetersB"
-              id="CentimetersB"
-            />
-            <RadioButton labelText="Meters" value="MetersB" id="MetersB" />
-            <RadioButton
-              labelText="Kilometers"
-              value="KilometersB"
-              id="KilometersB"
+              labelText="Metric Tons"
+              value="MetricTonsB"
+              id="MetricTonsB"
             />
           </RadioButtonGroup>
         </Column>
@@ -97,25 +93,21 @@ const MassConverter = () => {
             defaultSelected={conversionUnit}
             onChange={(selected) => setConversionUnit(selected)}
           >
-            <RadioButton labelText="Inches" value="InchesC" id="InchesC" />
-            <RadioButton labelText="Feet" value="FeetC" id="FeetC" />
-            <RadioButton labelText="Yards" value="YardsC" id="YardsC" />
-            <RadioButton labelText="Miles" value="MilesC" id="MilesC" />
+            <RadioButton labelText="Pounds" value="PoundsC" id="PoundsC" />
+            <RadioButton labelText="Grains" value="GrainsC" id="GrainsC" />
+            <RadioButton labelText="Drams" value="DramsC" id="DramsC" />
+            <RadioButton labelText="Ounces" value="mOuncesC" id="mOuncesC" />
+            <RadioButton labelText="Tons" value="TonsC" id="TonsC" />
+            <RadioButton labelText="Grams" value="GramsC" id="GramsC" />
             <RadioButton
-              labelText="Millimeters"
-              value="MillimetersC"
-              id="MillimetersC"
+              labelText="Kilograms"
+              value="KilogramsC"
+              id="KilogramsC"
             />
             <RadioButton
-              labelText="Centimeters"
-              value="CentimetersC"
-              id="CentimetersC"
-            />
-            <RadioButton labelText="Meters" value="MetersC" id="MetersC" />
-            <RadioButton
-              labelText="Kilometers"
-              value="KilometersC"
-              id="KilometersC"
+              labelText="Metric Tons"
+              value="MetricTonsC"
+              id="MetricTonsC"
             />
           </RadioButtonGroup>
         </Column>

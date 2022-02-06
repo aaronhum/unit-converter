@@ -7,14 +7,14 @@ import {
   RadioButton,
   RadioButtonGroup,
 } from "carbon-components-react";
-import lengthConversion from "../../utils/lengthConversion";
+import timeConversion from "../../utils/timeConversion";
 import "./converter.css";
 
 const TimeConverter = () => {
-  const [baseUnit, setBaseUnit] = useState("InchesB");
-  const [conversionUnit, setConversionUnit] = useState("InchesC");
+  const [baseUnit, setBaseUnit] = useState("CenturiesB");
+  const [conversionUnit, setConversionUnit] = useState("CenturiesC");
   const [input, setInput] = useState(1);
-  const output = lengthConversion(baseUnit, conversionUnit, input);
+  const output = timeConversion(baseUnit, conversionUnit, input);
   return (
     <Grid>
       <Row>
@@ -26,29 +26,62 @@ const TimeConverter = () => {
             defaultSelected={baseUnit}
             onChange={(selected) => setBaseUnit(selected)}
           >
-            <RadioButton labelText="Inches" value="InchesB" id="InchesB" />
-            <RadioButton labelText="Feet" value="FeetB" id="FeetB" />
-            <RadioButton labelText="Yards" value="YardsB" id="YardsB" />
-            <RadioButton labelText="Miles" value="MilesB" id="MilesB" />
             <RadioButton
-              labelText="Millimeters"
-              value="MillimetersB"
-              id="MillimetersB"
+              labelText="Centuries"
+              value="CenturiesB"
+              id="CenturiesB"
+            />
+            <RadioButton labelText="Days" value="DaysB" id="DaysB" />
+            <RadioButton labelText="Decades" value="DecadesB" id="DecadesB" />
+            <RadioButton
+              labelText="Femtoseconds"
+              value="FemtosecondsB"
+              id="FemtosecondsB"
             />
             <RadioButton
-              labelText="Centimeters"
-              value="CentimetersB"
-              id="CentimetersB"
+              labelText="Fortnights"
+              value="FortnightsB"
+              id="FortnightsB"
             />
-            <RadioButton labelText="Meters" value="MetersB" id="MetersB" />
+            <RadioButton labelText="Hours" value="HoursB" id="HoursB" />
             <RadioButton
-              labelText="Kilometers"
-              value="KilometersB"
-              id="KilometersB"
+              labelText="Microseconds"
+              value="MicrosecondsB"
+              id="MicrosecondsB"
             />
+            <RadioButton
+              labelText="Millenium"
+              value="MilleniumB"
+              id="MilleniumB"
+            />
+            <RadioButton
+              labelText="Milliseconds"
+              value="MillisecondsB"
+              id="MillisecondsB"
+            />
+            <RadioButton labelText="Minutes" value="MinutesB" id="MinutesB" />
+            <RadioButton labelText="Months" value="MonthsB" id="MonthsB" />
+            <RadioButton
+              labelText="Nanoseconds"
+              value="NanosecondsB"
+              id="NanosecondsB"
+            />
+            <RadioButton
+              labelText="Picoseconds"
+              value="PicosecondsB"
+              id="PicosecondsB"
+            />
+            <RadioButton labelText="Seconds" value="SecondsB" id="SecondsB" />
+            <RadioButton
+              labelText="Sidereal Years"
+              value="SiderealYearsB"
+              id="SiderealYearsB"
+            />
+            <RadioButton labelText="Weeks" value="WeeksB" id="WeeksB" />
+            <RadioButton labelText="Years" value="YearsB" id="YearsB" />
           </RadioButtonGroup>
         </Column>
-        <Column sm={0} md={3} lg={5}>
+        <Column sm={0} md={3} lg={4}>
           <NumberInput
             id="baseUnitInput1"
             min={0}
@@ -59,7 +92,7 @@ const TimeConverter = () => {
             onChange={(e) => setInput(e.imaginaryTarget.value)}
           />
         </Column>
-        <Column sm={0} md={3} lg={5}>
+        <Column sm={0} md={3} lg={4}>
           <NumberInput
             id="conversionUnitOutput"
             value={output}
@@ -97,26 +130,59 @@ const TimeConverter = () => {
             defaultSelected={conversionUnit}
             onChange={(selected) => setConversionUnit(selected)}
           >
-            <RadioButton labelText="Inches" value="InchesC" id="InchesC" />
-            <RadioButton labelText="Feet" value="FeetC" id="FeetC" />
-            <RadioButton labelText="Yards" value="YardsC" id="YardsC" />
-            <RadioButton labelText="Miles" value="MilesC" id="MilesC" />
             <RadioButton
-              labelText="Millimeters"
-              value="MillimetersC"
-              id="MillimetersC"
+              labelText="Centuries"
+              value="CenturiesC"
+              id="CenturiesC"
+            />
+            <RadioButton labelText="Days" value="DaysC" id="DaysC" />
+            <RadioButton labelText="Decades" value="DecadesC" id="DecadesC" />
+            <RadioButton
+              labelText="Femtoseconds"
+              value="FemtosecondsC"
+              id="FemtosecondsC"
             />
             <RadioButton
-              labelText="Centimeters"
-              value="CentimetersC"
-              id="CentimetersC"
+              labelText="Fortnights"
+              value="FortnightsC"
+              id="FortnightsC"
             />
-            <RadioButton labelText="Meters" value="MetersC" id="MetersC" />
+            <RadioButton labelText="Hours" value="HoursC" id="HoursC" />
             <RadioButton
-              labelText="Kilometers"
-              value="KilometersC"
-              id="KilometersC"
+              labelText="Microseconds"
+              value="MicrosecondsC"
+              id="MicrosecondsC"
             />
+            <RadioButton
+              labelText="Millenium"
+              value="MilleniumC"
+              id="MilleniumC"
+            />
+            <RadioButton
+              labelText="Milliseconds"
+              value="MillisecondsC"
+              id="MillisecondsC"
+            />
+            <RadioButton labelText="Minutes" value="MinutesC" id="MinutesC" />
+            <RadioButton labelText="Months" value="MonthsC" id="MonthsC" />
+            <RadioButton
+              labelText="Nanoseconds"
+              value="NanosecondsC"
+              id="NanosecondsC"
+            />
+            <RadioButton
+              labelText="Picoseconds"
+              value="PicosecondsC"
+              id="PicosecondsC"
+            />
+            <RadioButton labelText="Seconds" value="SecondsC" id="SecondsC" />
+            <RadioButton
+              labelText="Sidereal Years"
+              value="SiderealYearsC"
+              id="SiderealYearsC"
+            />
+            <RadioButton labelText="Weeks" value="WeeksC" id="WeeksC" />
+            <RadioButton labelText="Years" value="YearsC" id="YearsC" />
           </RadioButtonGroup>
         </Column>
       </Row>

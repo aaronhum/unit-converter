@@ -24,11 +24,11 @@ const areaConversion = (baseUnit, conversionUnit, input) => {
   };
 
   // base converted to meters
-  const baseToMeters = input / xToAcresConversions[baseUnitTrimmed];
+  const baseToAcres = input / xToAcresConversions[baseUnitTrimmed];
 
   // convert
   const converted = (
-    baseToMeters * xToAcresConversions[conversionUnitTrimmed]
+    baseToAcres * xToAcresConversions[conversionUnitTrimmed]
   ).toFixed(3); // Added toFixed(3) to round to 3 dec places
 
   // return

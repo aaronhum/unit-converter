@@ -87,7 +87,6 @@ const ConverterContainer = () => {
               </p>
             </div>
           }
-          disabled
         >
           <MassConverter />
         </Tab>
@@ -101,7 +100,6 @@ const ConverterContainer = () => {
               </p>
             </div>
           }
-          disabled
         >
           <TimeConverter />
         </Tab>
