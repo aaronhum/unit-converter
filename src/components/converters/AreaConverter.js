@@ -7,13 +7,14 @@ import {
   RadioButton,
   RadioButtonGroup,
 } from "carbon-components-react";
-import lengthConversion from "../../utils/lengthConversion";
+import areaConversion from "../../utils/areaConversion";
 
 const AreaConverter = () => {
-  const [baseUnit, setBaseUnit] = useState("InchesB");
-  const [conversionUnit, setConversionUnit] = useState("InchesC");
+  const [baseUnit, setBaseUnit] = useState("AcresB");
+  const [conversionUnit, setConversionUnit] = useState("AcresC");
   const [input, setInput] = useState(1);
-  const output = lengthConversion(baseUnit, conversionUnit, input);
+  const output = areaConversion(baseUnit, conversionUnit, input);
+  console.log(output);
   return (
     <Grid>
       <Row>
@@ -25,25 +26,37 @@ const AreaConverter = () => {
             defaultSelected={baseUnit}
             onChange={(selected) => setBaseUnit(selected)}
           >
-            <RadioButton labelText="Inches" value="InchesB" id="InchesB" />
-            <RadioButton labelText="Feet" value="FeetB" id="FeetB" />
-            <RadioButton labelText="Yards" value="YardsB" id="YardsB" />
-            <RadioButton labelText="Miles" value="MilesB" id="MilesB" />
+            <RadioButton labelText="Acres" value="AcresB" id="AcresB" />
+            <RadioButton labelText="Ares" value="AresB" id="AresB" />
+            <RadioButton labelText="Barns" value="BarnsB" id="BarnsB" />
             <RadioButton
-              labelText="Millimeters"
-              value="MillimetersB"
-              id="MillimetersB"
+              labelText="Hectares"
+              value="HectaresB"
+              id="HectaresB"
+            />
+            <RadioButton labelText="Roods" value="RoodsB" id="RoodsB" />
+            <RadioButton
+              labelText="Sq. Inches"
+              value="sqInchesB"
+              id="sqInchesB"
+            />
+            <RadioButton labelText="Sq. Feet" value="sqFeetB" id="sqFeetB" />
+            <RadioButton labelText="Sq. Yards" value="sqYardsB" id="sqYardsB" />
+            <RadioButton labelText="Sq. Miles" value="sqMilesB" id="sqMilesB" />
+            <RadioButton
+              labelText="Sq. Millimeters"
+              value="sqMillimetersB"
+              id="sqMillimetersB"
             />
             <RadioButton
-              labelText="Centimeters"
-              value="CentimetersB"
-              id="CentimetersB"
+              labelText="Sq. Centimeters"
+              value="sqCentimetersB"
+              id="sqCentimetersB"
             />
-            <RadioButton labelText="Meters" value="MetersB" id="MetersB" />
             <RadioButton
-              labelText="Kilometers"
-              value="KilometersB"
-              id="KilometersB"
+              labelText="Sq. Meters"
+              value="sqMetersB"
+              id="sqMetersB"
             />
           </RadioButtonGroup>
         </Column>
@@ -96,25 +109,37 @@ const AreaConverter = () => {
             defaultSelected={conversionUnit}
             onChange={(selected) => setConversionUnit(selected)}
           >
-            <RadioButton labelText="Inches" value="InchesC" id="InchesC" />
-            <RadioButton labelText="Feet" value="FeetC" id="FeetC" />
-            <RadioButton labelText="Yards" value="YardsC" id="YardsC" />
-            <RadioButton labelText="Miles" value="MilesC" id="MilesC" />
+            <RadioButton labelText="Acres" value="AcresC" id="AcresC" />
+            <RadioButton labelText="Ares" value="AresC" id="Aresc" />
+            <RadioButton labelText="Barns" value="BarnsC" id="BarnsC" />
             <RadioButton
-              labelText="Millimeters"
-              value="MillimetersC"
-              id="MillimetersC"
+              labelText="Hectares"
+              value="HectaresC"
+              id="HectaresC"
+            />
+            <RadioButton labelText="Roods" value="Roodsc" id="RoodsC" />
+            <RadioButton
+              labelText="Sq. Inches"
+              value="sqInchesC"
+              id="sqInchesC"
+            />
+            <RadioButton labelText="Sq. Feet" value="sqFeetC" id="sqFeetC" />
+            <RadioButton labelText="Sq. Yards" value="sqYardsC" id="sqYardsC" />
+            <RadioButton labelText="Sq. Miles" value="sqMilesC" id="sqMilesC" />
+            <RadioButton
+              labelText="Sq. Millimeters"
+              value="sqMillimetersC"
+              id="sqMillimetersC"
             />
             <RadioButton
-              labelText="Centimeters"
-              value="CentimetersC"
-              id="CentimetersC"
+              labelText="Sq. Centimeters"
+              value="sqCentimetersC"
+              id="sqCentimetersC"
             />
-            <RadioButton labelText="Meters" value="MetersC" id="MetersC" />
             <RadioButton
-              labelText="Kilometers"
-              value="KilometersC"
-              id="KilometersC"
+              labelText="Sq. Meters"
+              value="sqMetersC"
+              id="sqMetersC"
             />
           </RadioButtonGroup>
         </Column>
