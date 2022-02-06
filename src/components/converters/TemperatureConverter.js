@@ -56,11 +56,9 @@ const TemperatureConverter = () => {
           <div style={{ marginBottom: 10 }}>
             <NumberInput
               id="baseUnitInput1"
-              min={0}
               value={input}
               label="Base Unit Input"
               helperText="Enter your base unit input here"
-              invalidText="Number is invalid, positive numbers only"
               onChange={(e) => setInput(e.imaginaryTarget.value)}
             />
           </div>
