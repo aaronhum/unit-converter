@@ -4,7 +4,7 @@ import LengthConverter from "../converters/LengthConverter";
 import TemperatureConverter from "../converters/TemperatureConverter";
 import AreaConverter from "../converters/AreaConverter";
 import VolumeConverter from "../converters/VolumeConverter";
-import WeightConverter from "../converters/WeightConverter";
+import MassConverter from "../converters/MassConverter";
 import TimeConverter from "../converters/TimeConverter";
 import MemoryConverter from "../converters/MemoryConverter";
 import {
@@ -82,14 +82,14 @@ const ConverterContainer = () => {
           label={
             <div className="LabelText">
               <p>
-                <Scales20 className="WeightIcon" />
-                Weight
+                <Scales20 className="MassIcon" />
+                Mass
               </p>
             </div>
           }
           disabled
         >
-          <WeightConverter />
+          <MassConverter />
         </Tab>
         <Tab
           id="time"
