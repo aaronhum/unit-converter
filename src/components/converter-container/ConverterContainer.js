@@ -20,6 +20,7 @@ import {
   WatsonHealthSubVolume20,
 } from "@carbon/icons-react";
 import "./ConverterContainer.css";
+import FrequencyConverter from "../converters/FrequencyConverter";
 
 const ConverterContainer = () => {
   return (
@@ -113,7 +114,6 @@ const ConverterContainer = () => {
               </p>
             </div>
           }
-          disabled
         >
           <MemoryConverter />
         </Tab>
@@ -127,37 +127,8 @@ const ConverterContainer = () => {
               </p>
             </div>
           }
-          disabled
         >
-          <MemoryConverter />
-        </Tab>
-        <Tab
-          id="power"
-          label={
-            <div className="LabelText">
-              <p>
-                <Plug20 className="PowerIcon" />
-                Power
-              </p>
-            </div>
-          }
-          disabled
-        >
-          <MemoryConverter />
-        </Tab>
-        <Tab
-          id="Angle"
-          label={
-            <div className="LabelText">
-              <p>
-                <WatsonHealthAngle20 className="AngleIcon" />
-                Angle
-              </p>
-            </div>
-          }
-          disabled
-        >
-          <MemoryConverter />
+          <FrequencyConverter />
         </Tab>
       </Tabs>
     </div>
