@@ -17,14 +17,14 @@ import "./HeaderBar.scss";
 // document.documentElement.setAttribute("carbon-theme", theme); // "white" | "g10" | "g90" | "g100"
 
 const HeaderBar = () => {
-  const [theme, setTheme] = useState("white");
+  // const [theme, setTheme] = useState("white");
 
   return (
     <div>
       <Header aria-label="Header">
         <HeaderName prefix="Unit">Converter</HeaderName>
         <HeaderGlobalBar>
-          {theme === "white" && (
+          {/* {theme === "white" && (
             <HeaderGlobalAction
               aria-label="Light Theme"
               onClick={() => {
@@ -67,7 +67,7 @@ const HeaderBar = () => {
             >
               <AsleepFilled32 />
             </HeaderGlobalAction>
-          )}
+          )} */}
           <HeaderGlobalAction
             aria-label="See Source Code"
             href="https://github.com/aaronhum/unit-converter"
