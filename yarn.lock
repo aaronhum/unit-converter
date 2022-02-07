@@ -1070,6 +1070,11 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@carbon/colors@^10.35.0":
+  version "10.35.0"
+  resolved "https://registry.yarnpkg.com/@carbon/colors/-/colors-10.35.0.tgz#639639653f513979da80fe2615ca63e2e49fb780"
+  integrity sha512-V+nzHibjze9VqNdI2de7Fdb1IWgPzBvBwjalkAM6IMUTY9REcO2vNxPe9PyqC++sy6EIjRy3mRKRyIm9TrY35Q==
+
 "@carbon/feature-flags@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@carbon/feature-flags/-/feature-flags-0.7.0.tgz#fe8068b482439ae7af519ccdbf627f31373bb646"
@@ -1088,6 +1093,11 @@
     "@carbon/icon-helpers" "^10.26.0"
     "@carbon/telemetry" "0.0.0-alpha.6"
     prop-types "^15.7.2"
+
+"@carbon/import-once@^10.6.0":
+  version "10.6.0"
+  resolved "https://registry.yarnpkg.com/@carbon/import-once/-/import-once-10.6.0.tgz#a8fb846d9dc3eea9d45d9131a235e898d0f8db1e"
+  integrity sha512-vi0lnmZot9J5uW2p9chtyLBwe3nCTY4HrDWuglLOZVOHu7dbLQiRjD/r3uOjB4lr5qduRwk2hblBXKBhpVDBpg==
 
 "@carbon/layout@^10.35.0":
   version "10.35.0"
@@ -1109,6 +1119,24 @@
     semver "^7.3.2"
     winston "^3.3.3"
     yargs "^16.1.1"
+
+"@carbon/themes@^10.50.0":
+  version "10.50.0"
+  resolved "https://registry.yarnpkg.com/@carbon/themes/-/themes-10.50.0.tgz#1ebe92e2b1d34db501dd1c0826e847892d4183c2"
+  integrity sha512-+sz/l7b7lORgLNlauFF1UMchq4u0hoo0gXtGvBHXx04tivs9rK9rwRdZ0uJtakk6dNmN+me5femm1SM6kr9ziw==
+  dependencies:
+    "@carbon/colors" "^10.35.0"
+    "@carbon/layout" "^10.35.0"
+    "@carbon/type" "^10.40.0"
+    color "^3.1.2"
+
+"@carbon/type@^10.40.0":
+  version "10.40.0"
+  resolved "https://registry.yarnpkg.com/@carbon/type/-/type-10.40.0.tgz#b189baed73ce2d0ffb5dc08437144b38f788fbf7"
+  integrity sha512-+ECJANAmAFmF3DmmH9iaCNtVZypBcE8vvhecjRYirSj7FS+9LeiqAZGhjzAqtHpsItH5QHqQs10PrAY2zSylYA==
+  dependencies:
+    "@carbon/import-once" "^10.6.0"
+    "@carbon/layout" "^10.35.0"
 
 "@csstools/normalize.css@*":
   version "12.0.0"
@@ -3046,7 +3074,7 @@ color-string@^1.6.0:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
 
-color@^3.1.3:
+color@^3.1.2, color@^3.1.3:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/color/-/color-3.2.1.tgz#3544dc198caf4490c3ecc9a790b54fe9ff45e164"
   integrity sha512-aBl7dZI9ENN6fUGC7mWpMTPNHmWUSNan9tuWN6ahh5ZLNk9baLJOnSMlrQkHcrfFgz2/RigjUVAjdx36VcemKA==
