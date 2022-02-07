@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Header,
   HeaderName,
@@ -22,6 +22,11 @@ const HeaderBar = () => {
   const [theme, setTheme] = useState("white");
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(changeTheme(theme));
+    document.documentElement.setAttribute("carbon-theme", theme); // "white" | "g10" | "g90" | "g100"
+  }, [theme]);
 
   return (
     <div>
