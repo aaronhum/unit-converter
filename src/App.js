@@ -1,8 +1,10 @@
 import "./App.scss";
 import ConverterContainer from "./components/converter-container/ConverterContainer";
 import HeaderBar from "./components/header-bar/HeaderBar";
+import { connect } from "react-redux";
 
-function App() {
+const App = (props) => {
+  const { theme } = props;
   return (
     <div className="App">
       <div className="Header">
@@ -14,6 +16,10 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => ({
+  theme: state.theme,
+});
+
+export default connect(mapStateToProps)(App);
