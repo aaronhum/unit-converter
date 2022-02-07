@@ -1,24 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Header,
   HeaderName,
   HeaderGlobalAction,
   HeaderGlobalBar,
 } from "carbon-components-react";
-import { Code32 } from "@carbon/icons-react";
+import {
+  Code32,
+  Light32,
+  BrightnessContrast32,
+  Asleep32,
+  AsleepFilled32,
+} from "@carbon/icons-react";
 import "./HeaderBar.scss";
 
 // document.documentElement.setAttribute("carbon-theme", theme); // "white" | "g10" | "g90" | "g100"
 
 const HeaderBar = () => {
+  const [theme, setTheme] = useState("white");
+
   return (
     <div>
       <Header aria-label="Header">
         <HeaderName prefix="Unit">Converter</HeaderName>
         <HeaderGlobalBar>
+          {theme === "white" && (
+            <HeaderGlobalAction
+              aria-label="Light Theme"
+              onClick={() => {
+                setTheme("g10");
+                document.documentElement.setAttribute("carbon-theme", "g10");
+              }}
+            >
+              <Light32 />
+            </HeaderGlobalAction>
+          )}
+          {theme === "g10" && (
+            <HeaderGlobalAction
+              aria-label="Gray Theme"
+              onClick={() => {
+                setTheme("g90");
+                document.documentElement.setAttribute("carbon-theme", "g90");
+              }}
+            >
+              <BrightnessContrast32 />
+            </HeaderGlobalAction>
+          )}
+          {theme === "g90" && (
+            <HeaderGlobalAction
+              aria-label="Dark Theme"
+              onClick={() => {
+                setTheme("g100");
+                document.documentElement.setAttribute("carbon-theme", "g100");
+              }}
+            >
+              <Asleep32 />
+            </HeaderGlobalAction>
+          )}
+          {theme === "g100" && (
+            <HeaderGlobalAction
+              aria-label="Darker Theme"
+              onClick={() => {
+                setTheme("white");
+                document.documentElement.setAttribute("carbon-theme", "white");
+              }}
+            >
+              <AsleepFilled32 />
+            </HeaderGlobalAction>
+          )}
           <HeaderGlobalAction
             aria-label="See Source Code"
             href="https://github.com/aaronhum/unit-converter"
+            tooltipAlignment="end"
           >
             <Code32 />
           </HeaderGlobalAction>
