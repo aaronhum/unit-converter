@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from // { useState }
+"react";
 import {
   Header,
   HeaderName,
@@ -7,10 +8,10 @@ import {
 } from "carbon-components-react";
 import {
   Code32,
-  Light32,
-  BrightnessContrast32,
-  Asleep32,
-  AsleepFilled32,
+  // Light32,
+  // BrightnessContrast32,
+  // Asleep32,
+  // AsleepFilled32,
 } from "@carbon/icons-react";
 import "./HeaderBar.scss";
 
