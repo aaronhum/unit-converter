@@ -11,12 +11,10 @@ import {
   Area20,
   ConnectionSignal20,
   Hourglass20,
-  Plug20,
   RulerAlt20,
   Save20,
   Scales20,
   Temperature20,
-  WatsonHealthAngle20,
   WatsonHealthSubVolume20,
 } from "@carbon/icons-react";
 import "./ConverterContainer.css";
