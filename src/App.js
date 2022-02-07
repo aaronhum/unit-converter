@@ -10,9 +10,10 @@ const App = (props) => {
       <div className="Header">
         <HeaderBar />
       </div>
-
-      <div className="ConverterContainer">
-        <ConverterContainer />
+      <div theme={theme}>
+        <div className="ConverterContainer">
+          <ConverterContainer />
+        </div>
       </div>
     </div>
   );

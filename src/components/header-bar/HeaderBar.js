@@ -19,14 +19,14 @@ import { changeTheme } from "../../redux/actions/actions";
 // document.documentElement.setAttribute("carbon-theme", theme); // "white" | "g10" | "g90" | "g100"
 
 const HeaderBar = () => {
-  // const [theme, setTheme] = useState("white");
+  const [theme, setTheme] = useState("white");
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(changeTheme(theme));
     document.documentElement.setAttribute("carbon-theme", theme); // "white" | "g10" | "g90" | "g100"
-  }, [theme]);
+  }, [dispatch, theme]);
 
   return (
     <div>
